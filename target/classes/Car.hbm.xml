@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="Entity.Car" table="car" catalog="dbcars">
+       <id name="ID" type="java.lang.Integer">
+           <column name="ID" length="10"/>
+           <generator class="native" />
+       </id>
+
+       <property name="creator" type="string">
+           <column name="CREATOR" length="20" not-null="true" unique="true" />
+       </property>
+
+       <property name="model" type="string">
+           <column name="MODEL" length="50" not-null="true" unique="true" />
+       </property>
+
+       <property name="country" type="string">
+           <column name="COUNTRY" length="10" not-null="true" unique="true" />
+       </property>
+
+   </class>
+
+</hibernate-mapping>

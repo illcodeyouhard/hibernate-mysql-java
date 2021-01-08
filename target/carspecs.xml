@@ -1,0 +1,26 @@
+<ArrayList>
+  <item>
+    <body>sedan</body>
+    <color>white</color>
+    <engine_size>6</engine_size>
+    <car>
+      <creator>Mercedes</creator>
+      <model>E63s</model>
+      <country>Germany</country>
+      <id>1</id>
+    </car>
+    <id>1</id>
+  </item>
+  <item>
+    <body>coupe</body>
+    <color>red</color>
+    <engine_size>4</engine_size>
+    <car>
+      <creator>Ferrari</creator>
+      <model>Berlinetta</model>
+      <country>Italy</country>
+      <id>2</id>
+    </car>
+    <id>2</id>
+  </item>
+</ArrayList>

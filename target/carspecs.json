@@ -1,0 +1,23 @@
+[ {
+  "body" : "sedan",
+  "color" : "white",
+  "engine_size" : 6,
+  "car" : {
+    "creator" : "Mercedes",
+    "model" : "E63s",
+    "country" : "Germany",
+    "id" : 1
+  },
+  "id" : 1
+}, {
+  "body" : "coupe",
+  "color" : "red",
+  "engine_size" : 4,
+  "car" : {
+    "creator" : "Ferrari",
+    "model" : "Berlinetta",
+    "country" : "Italy",
+    "id" : 2
+  },
+  "id" : 2
+} ]

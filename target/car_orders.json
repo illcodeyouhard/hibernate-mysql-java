@@ -1,0 +1,25 @@
+[ {
+  "comments" : "as soon as possible",
+  "city" : "Poznan",
+  "amount" : 10,
+  "car" : {
+    "creator" : "Mercedes",
+    "model" : "E63s",
+    "country" : "Germany",
+    "id" : 1
+  },
+  "order_ID" : 1,
+  "car_ID" : 1
+}, {
+  "comments" : "until spring",
+  "city" : "London",
+  "amount" : 3,
+  "car" : {
+    "creator" : "Ferrari",
+    "model" : "Berlinetta",
+    "country" : "Italy",
+    "id" : 2
+  },
+  "order_ID" : 2,
+  "car_ID" : 2
+} ]

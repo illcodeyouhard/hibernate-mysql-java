@@ -1,0 +1,403 @@
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (dbcars.car)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'car0_.ID as ID1_0_' {alias=k, className=Entity.Car, tableAlias=car0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'car0_.CREATOR as CREATOR2_0_, car0_.MODEL as MODEL3_0_, car0_.COUNTRY as COUNTRY4_0_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[k], fromElementByTableAlias=[car0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'dbcars.car car0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=k,role=null,tableName=dbcars.car,tableAlias=car0_,origin=null,columns={,className=Entity.Car}}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: SELECT k FROM Entity.Car k
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select car0_.ID as ID1_0_, car0_.CREATOR as CREATOR2_0_, car0_.MODEL as MODEL3_0_, car0_.COUNTRY as COUNTRY4_0_ from dbcars.car car0_
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+DEBUG main org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Opening new JDBC connection
+DEBUG main org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Created connection to: jdbc:mysql://localhost:3306/dbcars?useSSL=false, Isolation Level: 4
+DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+DEBUG main org.hibernate.SQL - select car0_.ID as ID1_0_, car0_.CREATOR as CREATOR2_0_, car0_.MODEL as MODEL3_0_, car0_.COUNTRY as COUNTRY4_0_ from dbcars.car car0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car#2]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: SELECT k FROM Entity.Carspecs k
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'FROM'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[IDENT] Node: 'Entity'
+       |     |  \-[IDENT] Node: 'Carspecs'
+       |     \-[ALIAS] Node: 'k'
+       \-[SELECT] Node: 'SELECT'
+          \-[IDENT] Node: 'k'
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : Entity.Carspecs (k) -> carspecs0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : k -> carspecs0_.ID
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} carspecs0_.ID ) ( FromClause{level=1} dbcars.carspecs carspecs0_ ) )
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [dbcars.carspecs carspecs0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (dbcars.carspecs)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'carspecs0_.ID as ID1_3_' {alias=k, className=Entity.Carspecs, tableAlias=carspecs0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'carspecs0_.BODY as BODY2_3_, carspecs0_.COLOR as COLOR3_3_, carspecs0_.ENGINE_SIZE as ENGINE4_3_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[k], fromElementByTableAlias=[carspecs0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'dbcars.carspecs carspecs0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=k,role=null,tableName=dbcars.carspecs,tableAlias=carspecs0_,origin=null,columns={,className=Entity.Carspecs}}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: SELECT k FROM Entity.Carspecs k
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select carspecs0_.ID as ID1_3_, carspecs0_.BODY as BODY2_3_, carspecs0_.COLOR as COLOR3_3_, carspecs0_.ENGINE_SIZE as ENGINE4_3_ from dbcars.carspecs carspecs0_
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - select carspecs0_.ID as ID1_3_, carspecs0_.BODY as BODY2_3_, carspecs0_.COLOR as COLOR3_3_, carspecs0_.ENGINE_SIZE as ENGINE4_3_ from dbcars.carspecs carspecs0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Carspecs#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Carspecs#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Carspecs#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Carspecs#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Carspecs#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Carspecs#2]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: SELECT k FROM Entity.Car_orders k
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'FROM'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[IDENT] Node: 'Entity'
+       |     |  \-[IDENT] Node: 'Car_orders'
+       |     \-[ALIAS] Node: 'k'
+       \-[SELECT] Node: 'SELECT'
+          \-[IDENT] Node: 'k'
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : Entity.Car_orders (k) -> car_orders0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : k -> car_orders0_.ORDER_ID
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} car_orders0_.ORDER_ID ) ( FromClause{level=1} dbcars.car_orders car_orders0_ ) )
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [dbcars.car_orders car_orders0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (dbcars.car_orders)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'car_orders0_.ORDER_ID as ORDER1_2_' {alias=k, className=Entity.Car_orders, tableAlias=car_orders0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'car_orders0_.AMOUNT as AMOUNT2_2_, car_orders0_.CITY as CITY3_2_, car_orders0_.COMMENTS as COMMENTS4_2_, car_orders0_.CAR_ID as CAR5_2_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[k], fromElementByTableAlias=[car_orders0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'dbcars.car_orders car_orders0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=k,role=null,tableName=dbcars.car_orders,tableAlias=car_orders0_,origin=null,columns={,className=Entity.Car_orders}}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: SELECT k FROM Entity.Car_orders k
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select car_orders0_.ORDER_ID as ORDER1_2_, car_orders0_.AMOUNT as AMOUNT2_2_, car_orders0_.CITY as CITY3_2_, car_orders0_.COMMENTS as COMMENTS4_2_, car_orders0_.CAR_ID as CAR5_2_ from dbcars.car_orders car_orders0_
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - select car_orders0_.ORDER_ID as ORDER1_2_, car_orders0_.AMOUNT as AMOUNT2_2_, car_orders0_.CITY as CITY3_2_, car_orders0_.COMMENTS as COMMENTS4_2_, car_orders0_.CAR_ID as CAR5_2_ from dbcars.car_orders car_orders0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_orders#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_orders#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_orders#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_orders#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_orders#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_orders#2]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: SELECT k FROM Entity.Car_creators k
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'FROM'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[IDENT] Node: 'Entity'
+       |     |  \-[IDENT] Node: 'Car_creators'
+       |     \-[ALIAS] Node: 'k'
+       \-[SELECT] Node: 'SELECT'
+          \-[IDENT] Node: 'k'
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : Entity.Car_creators (k) -> car_creato0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : k -> car_creato0_.WORKER_ID
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} car_creato0_.WORKER_ID ) ( FromClause{level=1} dbcars.car_creators car_creato0_ ) )
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [dbcars.car_creators car_creato0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (dbcars.car_creators)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'car_creato0_.WORKER_ID as WORKER1_1_' {alias=k, className=Entity.Car_creators, tableAlias=car_creato0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'car_creato0_.NAME as NAME2_1_, car_creato0_.SURNAME as SURNAME3_1_, car_creato0_.CAR_ID as CAR4_1_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[k], fromElementByTableAlias=[car_creato0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'dbcars.car_creators car_creato0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=k,role=null,tableName=dbcars.car_creators,tableAlias=car_creato0_,origin=null,columns={,className=Entity.Car_creators}}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: SELECT k FROM Entity.Car_creators k
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select car_creato0_.WORKER_ID as WORKER1_1_, car_creato0_.NAME as NAME2_1_, car_creato0_.SURNAME as SURNAME3_1_, car_creato0_.CAR_ID as CAR4_1_ from dbcars.car_creators car_creato0_
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - select car_creato0_.WORKER_ID as WORKER1_1_, car_creato0_.NAME as NAME2_1_, car_creato0_.SURNAME as SURNAME3_1_, car_creato0_.CAR_ID as CAR4_1_ from dbcars.car_creators car_creato0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_creators#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_creators#2]
+DEBUG main org.hibernate.loader.Loader - Result set row: 2
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_creators#3]
+DEBUG main org.hibernate.loader.Loader - Result set row: 3
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_creators#4]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_creators#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_creators#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_creators#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_creators#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_creators#3]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_creators#3]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_creators#4]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_creators#4]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: SELECT k FROM Entity.Delivery k
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'FROM'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[IDENT] Node: 'Entity'
+       |     |  \-[IDENT] Node: 'Delivery'
+       |     \-[ALIAS] Node: 'k'
+       \-[SELECT] Node: 'SELECT'
+          \-[IDENT] Node: 'k'
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : Entity.Delivery (k) -> delivery0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : k -> delivery0_.ORDER_ID
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} delivery0_.ORDER_ID ) ( FromClause{level=1} dbcars.delivery delivery0_ ) )
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [dbcars.delivery delivery0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (dbcars.delivery)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'delivery0_.ORDER_ID as ORDER1_4_' {alias=k, className=Entity.Delivery, tableAlias=delivery0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'delivery0_.TYPE as TYPE2_4_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[k], fromElementByTableAlias=[delivery0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'dbcars.delivery delivery0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=k,role=null,tableName=dbcars.delivery,tableAlias=delivery0_,origin=null,columns={,className=Entity.Delivery}}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: SELECT k FROM Entity.Delivery k
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select delivery0_.ORDER_ID as ORDER1_4_, delivery0_.TYPE as TYPE2_4_ from dbcars.delivery delivery0_
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - select delivery0_.ORDER_ID as ORDER1_4_, delivery0_.TYPE as TYPE2_4_ from dbcars.delivery delivery0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Delivery#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Delivery#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Delivery#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Delivery#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Delivery#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Delivery#2]
+DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+DEBUG main org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Opening new JDBC connection
+DEBUG main org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Created connection to: jdbc:mysql://localhost:3306/dbcars?useSSL=false, Isolation Level: 4
+DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+DEBUG main org.hibernate.SQL - select car0_.ID as ID1_0_, car0_.CREATOR as CREATOR2_0_, car0_.MODEL as MODEL3_0_, car0_.COUNTRY as COUNTRY4_0_ from dbcars.car car0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car#2]
+DEBUG main org.hibernate.SQL - select carspecs0_.ID as ID1_3_, carspecs0_.BODY as BODY2_3_, carspecs0_.COLOR as COLOR3_3_, carspecs0_.ENGINE_SIZE as ENGINE4_3_ from dbcars.carspecs carspecs0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Carspecs#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Carspecs#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Carspecs#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Carspecs#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Carspecs#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Carspecs#2]
+DEBUG main org.hibernate.SQL - select car_orders0_.ORDER_ID as ORDER1_2_, car_orders0_.AMOUNT as AMOUNT2_2_, car_orders0_.CITY as CITY3_2_, car_orders0_.COMMENTS as COMMENTS4_2_, car_orders0_.CAR_ID as CAR5_2_ from dbcars.car_orders car_orders0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_orders#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_orders#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_orders#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_orders#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_orders#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_orders#2]
+DEBUG main org.hibernate.SQL - select car_creato0_.WORKER_ID as WORKER1_1_, car_creato0_.NAME as NAME2_1_, car_creato0_.SURNAME as SURNAME3_1_, car_creato0_.CAR_ID as CAR4_1_ from dbcars.car_creators car_creato0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_creators#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_creators#2]
+DEBUG main org.hibernate.loader.Loader - Result set row: 2
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_creators#3]
+DEBUG main org.hibernate.loader.Loader - Result set row: 3
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_creators#4]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_creators#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_creators#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_creators#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_creators#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_creators#3]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_creators#3]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_creators#4]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_creators#4]
+DEBUG main org.hibernate.SQL - select delivery0_.ORDER_ID as ORDER1_4_, delivery0_.TYPE as TYPE2_4_ from dbcars.delivery delivery0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Delivery#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Delivery#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Delivery#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Delivery#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Delivery#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Delivery#2]
+DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+DEBUG main org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Opening new JDBC connection
+DEBUG main org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Created connection to: jdbc:mysql://localhost:3306/dbcars?useSSL=false, Isolation Level: 4
+DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+DEBUG main org.hibernate.SQL - select car0_.ID as ID1_0_, car0_.CREATOR as CREATOR2_0_, car0_.MODEL as MODEL3_0_, car0_.COUNTRY as COUNTRY4_0_ from dbcars.car car0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car#2]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: SELECT color FROM Entity.Carspecs
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'FROM'
+       |  \-[RANGE] Node: 'RANGE'
+       |     \-[DOT] Node: '.'
+       |        +-[IDENT] Node: 'Entity'
+       |        \-[IDENT] Node: 'Carspecs'
+       \-[SELECT] Node: 'SELECT'
+          \-[IDENT] Node: 'color'
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : Entity.Carspecs (<no alias>) -> carspecs0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias} -> {synthetic-alias}
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : color -> org.hibernate.type.StringType@cd3acb60
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias}.color -> carspecs0_.COLOR
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} ( carspecs0_.COLOR {synthetic-alias} color ) ) ( FromClause{level=1} dbcars.carspecs carspecs0_ ) )
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [dbcars.carspecs carspecs0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (dbcars.carspecs)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[DOT] DotNode: 'carspecs0_.COLOR' {propertyName=color,dereferenceType=ALL,propertyPath=color,path={synthetic-alias}.color,tableAlias=carspecs0_,className=Entity.Carspecs,classAlias=null}
+    |  |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+    |  |  \-[IDENT] IdentNode: 'color' {originalText=color}
+    |  \-[SELECT_COLUMNS] SqlNode: ' as col_0_0_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[carspecs0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'dbcars.carspecs carspecs0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=dbcars.carspecs,tableAlias=carspecs0_,origin=null,columns={,className=Entity.Carspecs}}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: SELECT color FROM Entity.Carspecs
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select carspecs0_.COLOR as col_0_0_ from dbcars.carspecs carspecs0_
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - select carspecs0_.COLOR as col_0_0_ from dbcars.carspecs carspecs0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: 
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: 
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: SELECT amount FROM Entity.Car_orders
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'FROM'
+       |  \-[RANGE] Node: 'RANGE'
+       |     \-[DOT] Node: '.'
+       |        +-[IDENT] Node: 'Entity'
+       |        \-[IDENT] Node: 'Car_orders'
+       \-[SELECT] Node: 'SELECT'
+          \-[IDENT] Node: 'amount'
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : Entity.Car_orders (<no alias>) -> car_orders0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias} -> {synthetic-alias}
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : amount -> org.hibernate.type.IntegerType@a705fb6e
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias}.amount -> car_orders0_.AMOUNT
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} ( car_orders0_.AMOUNT {synthetic-alias} amount ) ) ( FromClause{level=1} dbcars.car_orders car_orders0_ ) )
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [dbcars.car_orders car_orders0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (dbcars.car_orders)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[DOT] DotNode: 'car_orders0_.AMOUNT' {propertyName=amount,dereferenceType=ALL,propertyPath=amount,path={synthetic-alias}.amount,tableAlias=car_orders0_,className=Entity.Car_orders,classAlias=null}
+    |  |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+    |  |  \-[IDENT] IdentNode: 'amount' {originalText=amount}
+    |  \-[SELECT_COLUMNS] SqlNode: ' as col_0_0_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[car_orders0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'dbcars.car_orders car_orders0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=dbcars.car_orders,tableAlias=car_orders0_,origin=null,columns={,className=Entity.Car_orders}}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: SELECT amount FROM Entity.Car_orders
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select car_orders0_.AMOUNT as col_0_0_ from dbcars.car_orders car_orders0_
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - select car_orders0_.AMOUNT as col_0_0_ from dbcars.car_orders car_orders0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: 
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: 
+DEBUG main org.hibernate.SQL - select car_creato0_.WORKER_ID as WORKER1_1_, car_creato0_.NAME as NAME2_1_, car_creato0_.SURNAME as SURNAME3_1_, car_creato0_.CAR_ID as CAR4_1_ from dbcars.car_creators car_creato0_ limit ?
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_creators#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[Entity.Car_creators#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_creators#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_creators#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [Entity.Car_creators#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [Entity.Car_creators#2]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: SELECT type FROM Entity.Delivery
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'FROM'
+       |  \-[RANGE] Node: 'RANGE'
+       |     \-[DOT] Node: '.'
+       |        +-[IDENT] Node: 'Entity'
+       |        \-[IDENT] Node: 'Delivery'
+       \-[SELECT] Node: 'SELECT'
+          \-[IDENT] Node: 'type'
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : Entity.Delivery (<no alias>) -> delivery0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias} -> {synthetic-alias}
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : type -> org.hibernate.type.StringType@cd3acb60
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias}.type -> delivery0_.TYPE
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} ( delivery0_.TYPE {synthetic-alias} type ) ) ( FromClause{level=1} dbcars.delivery delivery0_ ) )
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [dbcars.delivery delivery0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (dbcars.delivery)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[DOT] DotNode: 'delivery0_.TYPE' {propertyName=type,dereferenceType=ALL,propertyPath=type,path={synthetic-alias}.type,tableAlias=delivery0_,className=Entity.Delivery,classAlias=null}
+    |  |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+    |  |  \-[IDENT] IdentNode: 'type' {originalText=type}
+    |  \-[SELECT_COLUMNS] SqlNode: ' as col_0_0_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[delivery0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'dbcars.delivery delivery0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=dbcars.delivery,tableAlias=delivery0_,origin=null,columns={,className=Entity.Delivery}}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: SELECT type FROM Entity.Delivery
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select delivery0_.TYPE as col_0_0_ from dbcars.delivery delivery0_
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - select delivery0_.TYPE as col_0_0_ from dbcars.delivery delivery0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: 
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: 

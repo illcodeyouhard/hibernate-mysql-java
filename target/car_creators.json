@@ -1,0 +1,45 @@
+[ {
+  "name" : "Maksym",
+  "surname" : "Dmyterko",
+  "car" : {
+    "creator" : "Mercedes",
+    "model" : "E63s",
+    "country" : "Germany",
+    "id" : 1
+  },
+  "worker_ID" : 1,
+  "car_ID" : 1
+}, {
+  "name" : "Volha",
+  "surname" : "Andrava",
+  "car" : {
+    "creator" : "Mercedes",
+    "model" : "E63s",
+    "country" : "Germany",
+    "id" : 1
+  },
+  "worker_ID" : 2,
+  "car_ID" : 1
+}, {
+  "name" : "Danila",
+  "surname" : "Prymak",
+  "car" : {
+    "creator" : "Ferrari",
+    "model" : "Berlinetta",
+    "country" : "Italy",
+    "id" : 2
+  },
+  "worker_ID" : 3,
+  "car_ID" : 2
+}, {
+  "name" : "Denis",
+  "surname" : "Kulets",
+  "car" : {
+    "creator" : "Ferrari",
+    "model" : "Berlinetta",
+    "country" : "Italy",
+    "id" : 2
+  },
+  "worker_ID" : 4,
+  "car_ID" : 2
+} ]

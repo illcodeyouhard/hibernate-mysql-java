@@ -1,0 +1,36 @@
+<ArrayList>
+  <item>
+    <type>plane</type>
+    <car_orders>
+      <comments>as soon as possible</comments>
+      <city>Poznan</city>
+      <amount>10</amount>
+      <car>
+        <creator>Mercedes</creator>
+        <model>E63s</model>
+        <country>Germany</country>
+        <id>1</id>
+      </car>
+      <order_ID>1</order_ID>
+      <car_ID>1</car_ID>
+    </car_orders>
+    <order_ID>1</order_ID>
+  </item>
+  <item>
+    <type>ship</type>
+    <car_orders>
+      <comments>until spring</comments>
+      <city>London</city>
+      <amount>3</amount>
+      <car>
+        <creator>Ferrari</creator>
+        <model>Berlinetta</model>
+        <country>Italy</country>
+        <id>2</id>
+      </car>
+      <order_ID>2</order_ID>
+      <car_ID>2</car_ID>
+    </car_orders>
+    <order_ID>2</order_ID>
+  </item>
+</ArrayList>

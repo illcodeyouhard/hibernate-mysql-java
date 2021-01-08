@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="Entity.Carspecs" table="carspecs" catalog="dbcars">
+        <id name="ID" type="java.lang.Integer">
+            <column name="ID" length="10"/>
+            <generator class="foreign">
+            <param name="property">car</param>
+            </generator>
+        </id>
+
+        <property name="body" type="string">
+            <column name="BODY" length="20" not-null="true" unique="true" />
+        </property>
+
+        <property name="color" type="string">
+            <column name="COLOR" length="20" not-null="true" unique="true" />
+        </property>
+
+        <property name="engine_size" type="int">
+            <column name="ENGINE_SIZE" length="5" not-null="true" unique="true" />
+        </property>
+
+
+        <one-to-one name="car" constrained="true" class="Entity.Car"/>
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<ArrayList>
+  <item>
+    <creator>Mercedes</creator>
+    <model>E63s</model>
+    <country>Germany</country>
+    <id>1</id>
+  </item>
+  <item>
+    <creator>Ferrari</creator>
+    <model>Berlinetta</model>
+    <country>Italy</country>
+    <id>2</id>
+  </item>
+</ArrayList>
